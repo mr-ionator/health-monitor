@@ -39,6 +39,22 @@ check_cpu() {
 
 check_memory() {
 	echo "checking memory usage...."
+	T_mem=$(free -m | awk '/Mem:/ {print $2}')
+	u_mem=$(free -m | awk '/Mem:/ {print $3}')
+	T_mem_i=${T_mem%.*}
+	u_mem_i=${u_mem%.*}
+	percentage=$((u_mem_i * 100 / T_mem_i))
+	if [ $percentage -lt 70 ]; then
+		color=$GREEN
+		status="GOOD"
+	elif [ $percentage -lt 90 ]; then
+		color=$YELLOW
+		status="WARNING"
+	else
+		color=$RED
+		status="CRITICAL"
+	fi
+	echo -e "${color}Memory Usage: ${u_mem_i}MB / ${T_mem_i}MB (${percentage}%) [${status}]${NC}"
 }
 
 check_disk() {
