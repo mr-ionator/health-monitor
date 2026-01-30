@@ -10,35 +10,21 @@
 #color codes for output
 
 
-RED='\e[31m'
-GREEN='\e[32m'
-YELLOW="\[33m"
-NC="\e[0m"
+RED="\e[31m"
+GREEN="\32m"
+YELLOW="\33m"
+NC="\0m"
 
 #functions
 
 
 check_cpu() {
 	echo "checking cpu usage...."
-	idle=$(top -bn1 | awk '/id,/ {print $8}')
-	idle_int=${idle%.*}
-	cpu_usage=$((100 - idle_int))
-	if [ $cpu_usage -lt 70 ]; then
-		color=$GREEN
-		status="GOOD"
-	elif [ $cpu_usage -lt 90 ]; then
-		color=$YELLOW
-		status="WARNING"
-	else
-		color=$RED
-		status="CRITICAL"
-	fi
-	echo -e "${color}CPU USAGE: ${cpu_usage}% [${status}]${NC}"
-	echo $cpu_usage > /tmp/health_cpu.tmp
 }
 
 check_memory() {
 	echo "checking memory usage...."
+	
 }
 
 check_disk() {
@@ -59,7 +45,7 @@ main() {
 	echo "	Date:$(date)"
 	echo "======================================================================================================"
 	echo ""
-
+	
 	check_cpu
 	check_memory
 	check_disk
