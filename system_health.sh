@@ -55,10 +55,30 @@ check_memory() {
 		status="CRITICAL"
 	fi
 	echo -e "${color}Memory Usage: ${u_mem_i}MB / ${T_mem_i}MB (${percentage}%) [${status}]${NC}"
+	echo $percentage > /tmp/health_memory.tmp
 }
 
 check_disk() {
 	echo "cecking disk usage...."
+	df -h | grep -vE 'tmpfs|loop|udev' | tail -n +2 | while read line; do
+		filesystem=$(echo $line | awk '{print $1}')
+		usage=$(echo $line | awk '{print $5}' | sed 's/%//')
+		mount=$(echo $line | awk '{print $6}')
+		size=$(echo $line | awk '{print $2}')
+		used=$(echo $line | awk '{print $3}')
+		if [ $usage -lt 70 ]; then
+			color=$GREEN
+			status="GOOD"
+		elif [ $usage -lt 90 ]; then
+			color=$YELLOW
+			status="Warning"
+		else
+			color=$RED
+			status="CRITICAL"
+		fi
+		echo -e "${color} ${mount}: ${used}/${size} (${usage}%) [${status}]${NC}"
+        done
+	
 }
 
 check_services() {
