@@ -87,8 +87,9 @@ check_disk() {
 			status="CRITICAL"
 		fi
 		echo -e "${color} ${mount}: ${used}/${size} (${usage}%) [${status}]${NC}"
+		log_message "Disk ${mount}: ${used}/${size} (${usage}%) [${status}]${NC}"
         done
-	
+		
 }
 
 check_services() {
@@ -96,8 +97,10 @@ check_services() {
 	for service in "${SERVICES[@]}"; do
 		if systemctl is-active --quiet "$service"; then
 			echo -e "${GREEN} $service is running${NC}"
+			log_message "$service is RUNNING"
 		else
 			echo -e "${RED} $service is not running${NC}"
+			log_message "$service is not RUNNING"
 		fi
  	done
 }
@@ -107,6 +110,9 @@ gen_report() {
 }
 
 main() {
+	log_message "=========================================================================================="
+	log_message "SYSTEM HEALTH CHECK STARTED"
+	log_message "=========================================================================================="
 	echo "======================================================================================================"
 	echo "	SYSTEM HEALTH MONITOR"
 	echo "	Date:$(date)"
@@ -118,6 +124,9 @@ main() {
 	check_disk
 	check_services
 	gen_report
+
+	echo ""
+	log_message "Health Check Completed"
 }
 
 
