@@ -1,0 +1,56 @@
+[2026-02-26 12:49:27] CPU:USAGE 2% [GOOD]
+[2026-02-26 12:49:27] Memory:USAGE 5034MB [GOOD]
+[2026-02-26 12:49:27] Disk /: 303G/452G (71%) [Warning]\e[0m
+[2026-02-26 12:49:27] Disk /sys/firmware/efi/efivars: 154K/268K (59%) [GOOD]\e[0m
+[2026-02-26 12:49:27] Disk /run/credentials/systemd-journald.service: 0/1.0M (0%) [GOOD]\e[0m
+[2026-02-26 12:49:27] Disk /boot/efi: 4.3M/975M (1%) [GOOD]\e[0m
+[2026-02-26 12:51:05] CPU:USAGE 3% [GOOD]
+[2026-02-26 12:51:05] Memory:USAGE 4755MB [GOOD]
+[2026-02-26 12:51:05] Disk /: 303G/452G (71%) [Warning]\e[0m
+[2026-02-26 12:51:05] Disk /sys/firmware/efi/efivars: 154K/268K (59%) [GOOD]\e[0m
+[2026-02-26 12:51:05] Disk /run/credentials/systemd-journald.service: 0/1.0M (0%) [GOOD]\e[0m
+[2026-02-26 12:51:05] Disk /boot/efi: 4.3M/975M (1%) [GOOD]\e[0m
+[2026-02-26 12:51:05] ssh is not RUNNING
+[2026-02-26 12:51:05] cron is RUNNING
+[2026-02-26 12:51:05] NetworkManager is RUNNING
+[2026-02-26 12:53:36] ==========================================================================================
+[2026-02-26 12:53:36] SYSTEM HEALTH CHECK STARTED
+[2026-02-26 12:53:36] ==========================================================================================
+[2026-02-26 12:53:36] CPU:USAGE 1% [GOOD]
+[2026-02-26 12:53:36] Memory:USAGE 4739MB [GOOD]
+[2026-02-26 12:53:36] Disk /: 303G/452G (71%) [Warning]\e[0m
+[2026-02-26 12:53:36] Disk /sys/firmware/efi/efivars: 154K/268K (59%) [GOOD]\e[0m
+[2026-02-26 12:53:36] Disk /run/credentials/systemd-journald.service: 0/1.0M (0%) [GOOD]\e[0m
+[2026-02-26 12:53:36] Disk /boot/efi: 4.3M/975M (1%) [GOOD]\e[0m
+[2026-02-26 12:53:36] ssh is not RUNNING
+[2026-02-26 12:53:36] cron is RUNNING
+[2026-02-26 12:53:36] NetworkManager is RUNNING
+[2026-02-26 12:53:36] Health Check Completed
+[2026-02-26 13:06:41] ==========================================================================================
+[2026-02-26 13:06:41] SYSTEM HEALTH CHECK STARTED
+[2026-02-26 13:06:41] ==========================================================================================
+[2026-02-26 13:06:41] CPU:USAGE 4% [GOOD]
+[2026-02-26 13:06:41] Memory:USAGE 4777MB [GOOD]
+[2026-02-26 13:06:41] Disk /: 303G/452G (71%) [Warning]\e[0m
+[2026-02-26 13:06:41] Disk /sys/firmware/efi/efivars: 154K/268K (59%) [GOOD]\e[0m
+[2026-02-26 13:06:41] Disk /run/credentials/systemd-journald.service: 0/1.0M (0%) [GOOD]\e[0m
+[2026-02-26 13:06:41] Disk /boot/efi: 4.3M/975M (1%) [GOOD]\e[0m
+[2026-02-26 13:06:41] ssh is not RUNNING
+[2026-02-26 13:06:41] cron is RUNNING
+[2026-02-26 13:06:41] NetworkManager is RUNNING
+[2026-02-26 13:06:41] HTML report generated: ./reports/health_report_2026-02-26_13-06-41.html
+[2026-02-26 13:06:41] Health Check Completed
+[2026-02-26 13:19:57] ==========================================================================================
+[2026-02-26 13:19:57] SYSTEM HEALTH CHECK STARTED
+[2026-02-26 13:19:57] ==========================================================================================
+[2026-02-26 13:19:58] CPU:USAGE 1% [GOOD]
+[2026-02-26 13:19:58] Memory:USAGE 4647MB [GOOD]
+[2026-02-26 13:19:58] Disk /: 303G/452G (71%) [Warning]\e[0m
+[2026-02-26 13:19:58] Disk /sys/firmware/efi/efivars: 154K/268K (59%) [GOOD]\e[0m
+[2026-02-26 13:19:58] Disk /run/credentials/systemd-journald.service: 0/1.0M (0%) [GOOD]\e[0m
+[2026-02-26 13:19:58] Disk /boot/efi: 4.3M/975M (1%) [GOOD]\e[0m
+[2026-02-26 13:19:58] ssh is not RUNNING
+[2026-02-26 13:19:58] cron is RUNNING
+[2026-02-26 13:19:58] NetworkManager is RUNNING
+[2026-02-26 13:19:58] HTML report generated: ./reports/health_report_2026-02-26_13-19-58.html
+[2026-02-26 13:19:58] Health Check Completed
